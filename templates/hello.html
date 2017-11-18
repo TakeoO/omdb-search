@@ -28,12 +28,15 @@
                     </div>
                 </div>
                 <div class="col-md-9">
-                    <div class="input-group">
-                        <input name="q" placeholder="Search .." class="form-control">
-                        <span class="input-group-btn">
+                    <form action="/" method="get">
+                        <div class="input-group">
+                            <input name="q" placeholder="Search .." class="form-control">
+                            <span class="input-group-btn">
                  <button class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
-                </span>
-                    </div>
+
+                        </span>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -45,7 +48,7 @@
             <div class="row">
                 <div class="col-md-3 result-counter">
                     <span class="result-count-text">Result count:</span>
-                    <span class="result-count">12</span>
+                    <span class="result-count">{{foundRows}}</span>
                 </div>
                 <div class="col-md-9 text-right">
                     <nav aria-label="Page navigation">
@@ -55,11 +58,9 @@
                                     <span aria-hidden="true">&laquo;</span>
                                 </a>
                             </li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
+                            {% for i in range(1, pages + 1): %}
+                            <li><a href="/?q={{query}}&p={{i}}">{{ i }}</a></li>
+                            {% endfor %}
                             <li>
                                 <a href="#" aria-label="Next">
                                     <span aria-hidden="true">&raquo;</span>
@@ -72,13 +73,14 @@
         </div>
         <div class="panel-body">
             <div class="row results">
+                {% for result in results %}
                 <div class="col-md-12 result">
                     <div class="col-md-2 poster">
-                        <img class="img-responsive" src="http://via.placeholder.com/80x110"/>
+                        <img class="img-responsive" src="{{result['Poster']}}"/>
                     </div>
                     <div class="col-md-7 content">
-                        <div class="title"><strong>Lorem ipsum</strong></div>
-                        <div class="year">1999</div>
+                        <div class="title"><strong>{{result["Title"]}}</strong></div>
+                        <div class="year">{{result["Year"]}}</div>
                         <div class="director">Clint Eastwood</div>
                         <div class="actors">Vin Diesel, Tomica Hanks</div>
                     </div>
@@ -93,91 +95,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-md-12 result">
-                    <div class="col-md-2 poster">
-                        <img class="img-responsive" src="http://via.placeholder.com/80x110"/>
-                    </div>
-                    <div class="col-md-7 content">
-                        <div class="title"><strong>Lorem ipsum</strong></div>
-                        <div class="year">1999</div>
-                        <div class="director">Clint Eastwood</div>
-                        <div class="actors">Vin Diesel, Tomica Hanks</div>
-                    </div>
-                    <div class="col-md-3 rating">
-                        <span class="rating-text">Rating:</span>
-                        <span>
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star-empty"></i>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md-12 result">
-                    <div class="col-md-2 poster">
-                        <img class="img-responsive" src="http://via.placeholder.com/80x110"/>
-                    </div>
-                    <div class="col-md-7 content">
-                        <div class="title"><strong>Lorem ipsum</strong></div>
-                        <div class="year">1999</div>
-                        <div class="director">Clint Eastwood</div>
-                        <div class="actors">Vin Diesel, Tomica Hanks</div>
-                    </div>
-                    <div class="col-md-3 rating">
-                        <span class="rating-text">Rating:</span>
-                        <span>
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star-empty"></i>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md-12 result">
-                    <div class="col-md-2 poster">
-                        <img class="img-responsive" src="http://via.placeholder.com/80x110"/>
-                    </div>
-                    <div class="col-md-7 content">
-                        <div class="title"><strong>Lorem ipsum</strong></div>
-                        <div class="year">1999</div>
-                        <div class="director">Clint Eastwood</div>
-                        <div class="actors">Vin Diesel, Tomica Hanks</div>
-                    </div>
-                    <div class="col-md-3 rating">
-                        <span class="rating-text">Rating:</span>
-                        <span>
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star-empty"></i>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md-12 result">
-                    <div class="col-md-2 poster">
-                        <img class="img-responsive" src="http://via.placeholder.com/80x110"/>
-                    </div>
-                    <div class="col-md-7 content">
-                        <div class="title"><strong>Lorem ipsum</strong></div>
-                        <div class="year">1999</div>
-                        <div class="director">Clint Eastwood</div>
-                        <div class="actors">Vin Diesel, Tomica Hanks</div>
-                    </div>
-                    <div class="col-md-3 rating">
-                        <span class="rating-text">Rating:</span>
-                        <span>
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star-empty"></i>
-                        </span>
-                    </div>
-                </div>
-
+                {% endfor %}
             </div>
         </div>
     </div>
