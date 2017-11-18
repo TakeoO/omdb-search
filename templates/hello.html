@@ -2,18 +2,187 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>SmartNinja basic Jinja template</title>
+    <title>Omdb amateur search</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <link rel="stylesheet" href="assets/css/custom.css">
 </head>
-
 <body>
-
 <div class="container">
+    <div class="panel panel-default search-panel">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="brand-name
+                    text-center
+                    visible-sm
+                    visible-xs">
+                        Lenka Query
+                    </div>
+                    <div class="brand-name
+                     hidden-sm
+                     hidden-xs">
+                        Lenka Query
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="input-group">
+                        <input name="q" placeholder="Search .." class="form-control">
+                        <span class="input-group-btn">
+                 <button class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END :: Search panel -->
 
+    <div class="panel panel-default result-panel">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-md-3 result-counter">
+                    <span class="result-count-text">Result count:</span>
+                    <span class="result-count">12</span>
+                </div>
+                <div class="col-md-9 text-right">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row results">
+                <div class="col-md-12 result">
+                    <div class="col-md-2 poster">
+                        <img class="img-responsive" src="http://via.placeholder.com/80x110"/>
+                    </div>
+                    <div class="col-md-7 content">
+                        <div class="title"><strong>Lorem ipsum</strong></div>
+                        <div class="year">1999</div>
+                        <div class="director">Clint Eastwood</div>
+                        <div class="actors">Vin Diesel, Tomica Hanks</div>
+                    </div>
+                    <div class="col-md-3 rating">
+                        <span class="rating-text">Rating:</span>
+                        <span>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star-empty"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-12 result">
+                    <div class="col-md-2 poster">
+                        <img class="img-responsive" src="http://via.placeholder.com/80x110"/>
+                    </div>
+                    <div class="col-md-7 content">
+                        <div class="title"><strong>Lorem ipsum</strong></div>
+                        <div class="year">1999</div>
+                        <div class="director">Clint Eastwood</div>
+                        <div class="actors">Vin Diesel, Tomica Hanks</div>
+                    </div>
+                    <div class="col-md-3 rating">
+                        <span class="rating-text">Rating:</span>
+                        <span>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star-empty"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-12 result">
+                    <div class="col-md-2 poster">
+                        <img class="img-responsive" src="http://via.placeholder.com/80x110"/>
+                    </div>
+                    <div class="col-md-7 content">
+                        <div class="title"><strong>Lorem ipsum</strong></div>
+                        <div class="year">1999</div>
+                        <div class="director">Clint Eastwood</div>
+                        <div class="actors">Vin Diesel, Tomica Hanks</div>
+                    </div>
+                    <div class="col-md-3 rating">
+                        <span class="rating-text">Rating:</span>
+                        <span>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star-empty"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-12 result">
+                    <div class="col-md-2 poster">
+                        <img class="img-responsive" src="http://via.placeholder.com/80x110"/>
+                    </div>
+                    <div class="col-md-7 content">
+                        <div class="title"><strong>Lorem ipsum</strong></div>
+                        <div class="year">1999</div>
+                        <div class="director">Clint Eastwood</div>
+                        <div class="actors">Vin Diesel, Tomica Hanks</div>
+                    </div>
+                    <div class="col-md-3 rating">
+                        <span class="rating-text">Rating:</span>
+                        <span>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star-empty"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-12 result">
+                    <div class="col-md-2 poster">
+                        <img class="img-responsive" src="http://via.placeholder.com/80x110"/>
+                    </div>
+                    <div class="col-md-7 content">
+                        <div class="title"><strong>Lorem ipsum</strong></div>
+                        <div class="year">1999</div>
+                        <div class="director">Clint Eastwood</div>
+                        <div class="actors">Vin Diesel, Tomica Hanks</div>
+                    </div>
+                    <div class="col-md-3 rating">
+                        <span class="rating-text">Rating:</span>
+                        <span>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star-empty"></i>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- END :: Result panel -->
 </div>
 </body>
 </html>
